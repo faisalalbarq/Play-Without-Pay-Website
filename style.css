@@ -1,0 +1,194 @@
+/* Start Global Style */
+:root {
+    --main-color: #3a497b;
+    --main-bg-color: #272b30;
+    --alt-color: #32383e;
+    --active-color: #09c;
+    --main-transition: all 0.5s ease;
+  }
+  body {
+    font-family: cursive;
+    text-transform: capitalize;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+  }
+  @media (max-width: 600px) {
+    html {
+      font-size: 12px;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  h3 {
+    font-family: 'Nerko One', cursive;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  
+  a {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 400;
+  }
+  
+  .wrapp {
+    height: 35vh;
+    background-image: url('wraper.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 9999999;
+  
+  }
+  /* Start Games Sections */
+  
+  .games .wrapp {
+    background-color: var(--main-bg-color);
+  }
+  /* Start Nav */
+  .navbar {
+    padding: 0;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 9999999;
+  }
+  .navbar .container {
+    background-color: var(--main-color);
+    color: white;
+  }
+  .navbar a {
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .navbar-nav,
+  .navbar-nav .nav-link.show,
+  .nav-link:focus,
+  .nav-link:hover,
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link.show {
+    color: var(--active-color);
+  }
+  .navbar-brand:focus,
+  .navbar-brand:hover {
+    color: #fff;
+  }
+  /* End Nav */
+  
+  /* Start Cards  */
+  .cards,
+  .card {
+    background-color: var(--main-bg-color);
+  }
+  .card {
+    background-color: var(--main-bg-color);
+    transition: var(--main-transition);
+    filter: grayscale(0.7);
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    filter: grayscale(0);
+  }
+  .card-title {
+    font-size: 0.875em;
+  }
+  .card-title span {
+    background-color: var(--main-color);
+    transition: var(--main-transition);
+  }
+  .card:hover .free {
+    background-color: #0a58ca;
+  }
+  .card-text {
+    font-size: 0.875em;
+    font-family: 'Comfortaa', sans-serif;
+    color: #787878;
+  }
+  .card-footer span {
+    font-size: 0.8rem;
+    background-color: #78787814;
+  }
+  /* End Cards  */
+  /* End Games Sections */
+  
+  /* Start Details */
+  #layerContainer {
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #layerContainer i:not(:first-child) {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  #layerContainer::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    inset: 0;
+    z-index:  -1;;
+  }
+  #layerContainer i {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  #layerContainer .desc {
+    font-size: 0.875em;
+  }
+  #layerContainer i {
+    cursor: pointer;
+  }
+  #layerContainer .close {
+    top: 0;
+    right: 0;
+  }
+  #layerContainer .list span {
+    cursor: revert;
+  }
+  /* End Details */
+  
+  /* Start Loding */
+  .loading {
+    inset: 0;
+    background-color: #272b30fa;
+    z-index: 9999;
+  }
+  .loading .loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #fff;
+    border-right: 4px solid transparent;
+    animation: rotation 1s linear infinite;
+    position: relative;
+  }
+  .loading .loader::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-left: 4px solid #ff3d00;
+    border-bottom: 4px solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  /* End Lodnig */
